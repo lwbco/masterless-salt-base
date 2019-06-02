@@ -1,5 +1,5 @@
 base:
-  '*':
+  '*.lwb.co':
     - docker
     - fail2ban
     - git
@@ -17,3 +17,8 @@ base:
     - wget
     - salt.minion
     - salt.base
+
+  '*.servers.lwb.co':
+    - salt.cronjob
+
+

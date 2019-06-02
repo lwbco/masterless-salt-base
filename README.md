@@ -11,7 +11,7 @@ This repository uses [Effing Shell Scripts 2](https://github.com/madflojo/efs2) 
 To get started first you must clone this repository and change to the new directory.
 
 ```sh
-$ git clone https://github.com/madflojo/masterless-salt-base.git
+$ git clone https://github.com/lwbco/masterless-salt-base.git
 $ cd masterless-salt-base
 ```
 

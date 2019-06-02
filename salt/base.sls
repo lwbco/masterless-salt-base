@@ -7,5 +7,5 @@
 
 base_states:
   git.latest:
-    - name: https://github.com/madflojo/masterless-salt-base.git
+    - name: https://github.com/lwbco/masterless-salt-base.git
     - target: /srv/salt/base
