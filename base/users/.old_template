@@ -1,0 +1,38 @@
+{% comment %}
+{% for user, args in pillar.get('users', {}).items() %}
+{{user}}:
+  group.present:
+    - gid: {{ args['uid'] }}
+  user.present:
+    - fullname: {{ args['fullname'] }}
+    - uid: {{ args['uid'] }}
+    - gid: {{ args['uid'] }}
+    - shell: /bin/zsh
+    {% if grains['os'] == 'Ubuntu' %}
+    - groups:
+      - sudo
+      - adm
+      - dip
+      - cdrom
+      - plugdev
+    {% endif %}
+
+{% if args['ssh-keys'] %}
+
+{{user}}_key:
+  ssh_auth.present:
+    - user: {{user}}
+    - names:
+      {% for key in args['ssh-keys'] %}
+      - {{ key }}
+      {% endfor %}
+{% endif %}
+{% endfor %}
+{% endcomment %}
+
+/etc/sudoers.d/sudonopasswd:
+  file.managed:
+    - contents: "%sudo   ALL = (ALL) NOPASSWD: ALL"
+    - user: root
+    - group: root
+    - mode: 440

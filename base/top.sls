@@ -17,6 +17,8 @@ base:
     - wget
     - salt.minion
     - salt.base
+    - users
+    - users.leeward
 
   '*.servers.lwb.co':
     - salt.cronjob
