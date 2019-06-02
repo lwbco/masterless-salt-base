@@ -34,7 +34,7 @@ docker:
     - watch:
       - pkg: docker-ce
 
-docker-py:
+docker-compose:
   pip:
     - installed
     - require:
