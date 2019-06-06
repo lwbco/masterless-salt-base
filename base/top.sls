@@ -22,4 +22,6 @@ base:
   '*.servers.lwb.co':
     - salt.cronjob
 
+  '*.workstations.lwb.co':
+    - yubikey
 
