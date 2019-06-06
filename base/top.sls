@@ -11,7 +11,6 @@ base:
     - screen
     - ssh
     - swap
-    - sysdig
     - sysstat
     - timezone
     - wget

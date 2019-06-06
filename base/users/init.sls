@@ -4,3 +4,15 @@
     - user: root
     - group: root
     - mode: 440
+
+zsh:
+  pkg:
+    - installed
+
+bc:
+  pkg:
+    - installed
+
+vim:
+  pkg:
+    - installed

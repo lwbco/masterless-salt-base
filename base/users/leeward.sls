@@ -6,13 +6,14 @@ linked:
     - uid: 1133
     - gid: 1133
     - shell: /bin/zsh
-    {% if grains['os'] == 'Ubuntu' %}
+    {% if grains['os'] in ['Ubuntu', 'Raspbian'] %}
     - groups:
       - sudo
       - adm
       - dip
       - cdrom
       - plugdev
+      - docker
     {% endif %}
 
 leeward_ssh_keys:
