@@ -24,4 +24,5 @@ base:
 
   '*.workstations.lwb.co':
     - yubikey
+    - desktop
 
