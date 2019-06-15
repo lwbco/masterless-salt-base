@@ -25,24 +25,28 @@ leeward_ssh_keys:
 
 /home/linked/.config/Yubico/u2f_keys:
   file.managed:
+    - makedirs: true
     - source: salt://users/leeward/u2f-leeward
     - user: 1133
     - group: 1133
 
 /home/linked/.config/terminator/config:
   file.managed:
+    - makedirs: true
     - source: salt://users/leeward/terminator.conf
     - user: 1133
     - group: 1133
 
 /home/linked/.config/i3-regolith/config:
   file.managed:
+    - makedirs: true
     - source: salt://users/leeward/i3wm.conf
     - user: 1133
     - group: 1133
 
 /home/linked/.config/gtk-3.0/gtk.css:
   file.append:
+    - makedirs: true
     - text:
       - VteTerminal, vte-terminal { padding: 10px }
 
