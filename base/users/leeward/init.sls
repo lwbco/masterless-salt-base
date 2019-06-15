@@ -14,7 +14,6 @@ linked:
       - cdrom
       - plugdev
       - docker
-      - libvirt
       - dialout
     {% endif %}
 
