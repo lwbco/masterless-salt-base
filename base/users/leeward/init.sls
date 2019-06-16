@@ -45,8 +45,9 @@ leeward_ssh_keys:
     - group: 1133
 
 /home/linked/.config/gtk-3.0/gtk.css:
-  file.append:
+  file.managed:
     - makedirs: true
-    - text:
-      - VteTerminal, vte-terminal { padding: 10px }
+    - source: salt://users/leeward/gtk-3.0.css
+    - user: 1133
+    - group: 1133
 

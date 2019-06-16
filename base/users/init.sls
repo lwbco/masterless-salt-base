@@ -13,6 +13,6 @@ bc:
   pkg:
     - installed
 
-vim:
+neovim:
   pkg:
     - installed
