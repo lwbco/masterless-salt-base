@@ -51,3 +51,10 @@ leeward_ssh_keys:
     - user: 1133
     - group: 1133
 
+
+/home/linked/.config/wallpaper.jpg:
+  file.managed:
+    - makedirs: true
+    - source: salt://users/leeward/space_rockets_planets.jpg
+    - user: 1133
+    - group: 1133
