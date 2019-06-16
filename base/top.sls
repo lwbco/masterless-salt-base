@@ -17,12 +17,13 @@ base:
     - salt.minion
     - salt.base
     - users
-    - users.leeward
+    - leeward
 
   '*.servers.lwb.co':
     - salt.cronjob
 
   '*.workstations.lwb.co':
-    - yubikey
+    - force_yubikey
     - desktop
+    - leeward.desktop
 
