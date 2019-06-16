@@ -23,7 +23,7 @@
 /home/linked/.config/wallpaper.jpg:
   file.managed:
     - makedirs: true
-    - source: salt://leeward/space_rockets_planets.jpg
+    - source: salt://leeward/wallpapers/alena-aenami-landlynx355.jpg
     - user: 1133
     - group: 1133
 
@@ -32,3 +32,8 @@
     - source: salt://leeward/gtk-themes
     - user: 1133
     - group: 1133
+
+pywal:
+  pip.installed:
+    - name: pywal
+
