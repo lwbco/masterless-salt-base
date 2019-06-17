@@ -19,11 +19,16 @@
     - user: 1133
     - group: 1133
 
+/etc/xdg/compton.conf:
+  file.managed:
+    - makedirs: true
+    - source: salt://leeward/compton.conf
+
 
 /home/linked/.config/wallpaper.jpg:
   file.managed:
     - makedirs: true
-    - source: salt://leeward/wallpapers/alena-aenami-landlynx355.jpg
+    - source: salt://leeward/wallpapers/space_rockets_planets.jpg
     - user: 1133
     - group: 1133
 

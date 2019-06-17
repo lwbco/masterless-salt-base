@@ -1,0 +1,3 @@
+zrcs () {
+    cd ~/salt/base/leeward/Dotfiles/.zsh/
+}
