@@ -12,6 +12,9 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set autowrite     " Automatically :write before running commands
+set mouse=a
+set nocompatible
+set hidden
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -102,6 +105,7 @@ endif
 
 " I'm a rebel and an outlaw, 88 characters!
 set textwidth=88
+set colorcolumn=
 
 " Numbers
 set number
@@ -153,6 +157,37 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+" F buttons need better defaults 
+map <F1> <Esc>
+imap <F1> <Esc>
+nmap <F1> <nop>
+
+nmap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>:set paste<CR>
+imap <F2> <C-o>:set nonumber!<CR>:set foldcolumn=0<CR>:set paste<CR>
+
+map <F4> <Esc><Esc>:w<CR>
+imap <F4> <Esc><Esc><Esc>:w<CR>a
+
+map <F5> <Esc><Esc><Esc>:qa<CR>
+imap <F5> <Esc><Esc><Esc>:qa<CR>
+
+nmap <F8> <nop>
+nmap <F9> <nop>
+nmap <F12> <nop>
+
+" ii or jj map to escape
+imap ii <Esc>
+imap jj <Esc>
+
+" external copy paste -- saves selected buffer into your .viminfo file
+" so you can paste it into another vim instance
+vmap <silent> ,y "xy<CR>:wviminfo! ~/.viminfo<CR>
+vmap <silent> ,d "xd<CR>:wviminfo! ~/.viminfo<CR>
+vmap <silent> ,p :rviminfo! ~/.viminfo<CR>"xp
+nmap <silent> ,y "xy<CR>:wviminfo! ~/.viminfo<CR>
+nmap <silent> ,d "xd<CR>:wviminfo! ~/.viminfo<CR>
+nmap <silent> ,p :rviminfo! ~/.viminfo<CR>"xp
 
 " Move between linting errors
 nnoremap ]r :ALENextWrap<CR>

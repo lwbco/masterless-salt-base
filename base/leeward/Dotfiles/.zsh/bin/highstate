@@ -3,7 +3,5 @@
 BIN=${0:a:h}
 
 clear
-echo "Applying local highstate from $HOME/salt..." | lolcat -p 1
+echo $blue"Applying local highstate from $HOME/salt..."
 $BIN/local_salt state.highstate --state-output=mixed -l quiet $* | grep -v 'Result: Clean'
-
-source $HOME/.zshrc

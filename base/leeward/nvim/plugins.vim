@@ -21,12 +21,22 @@ Plug 'tpope/vim-surround'
 Plug 'vim-syntastic/syntastic'
 Plug 'spf13/vim-autoclose'
 Plug 'tpope/vim-fugitive'
+Plug 'janko/vim-test'
 Plug 'saltstack/salt-vim'
 Plug 'airblade/vim-gitgutter'
 
 if g:has_async
   Plug 'w0rp/ale'
 endif
+
+" Editing Plugins
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'MattesGroeger/vim-bookmarks'
+Plug 'yuttie/comfortable-motion.vim'
+Plug 'vim-ctrlspace/vim-ctrlspace'
+let g:CtrlSpaceDefaultMappingKey = "<C-space> "
+
+Plug 'kien/rainbow_parentheses.vim'
 
 " Python plugins
 Plug 'neomake/neomake'
