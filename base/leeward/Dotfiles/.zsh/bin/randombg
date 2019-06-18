@@ -1,0 +1,8 @@
+#!/bin/bash
+
+pushd ~/Nextcloud/wallpapers
+BG=$(ls *.jpg | shuf -n 1)
+cp $BG ~/.config/wallpaper.jpg
+feh --bg-scale $BG
+wal -i $BG
+popd

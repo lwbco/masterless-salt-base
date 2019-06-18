@@ -1,3 +1,7 @@
 gs() {
     git status $*
 }
+
+gc() {
+    git commit $*
+}

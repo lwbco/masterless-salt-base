@@ -9,3 +9,4 @@ base_states:
   git.latest:
     - name: https://github.com/lwbco/masterless-salt-base.git
     - target: /srv/salt
+    - force_reset: True

@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+#BIN="$(cd -P "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BIN=${0:a:h}
+
+clear
+echo "Applying local highstate from $HOME/salt..." | lolcat -p 1
+$BIN/local_salt state.highstate --state-output=mixed -l quiet $* | grep -v 'Result: Clean'
+
+source $HOME/.zshrc

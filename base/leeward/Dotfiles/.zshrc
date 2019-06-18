@@ -1,6 +1,7 @@
 # load custom executable functions
 source ~/.zsh/antigen.zsh
 
+export ANTIGEN_CACHE=~/.cache/antigen
 antigen init ~/.zsh/.antigenrc
 
 # TODO these need to be moved to the actual keybinds config file
@@ -47,6 +48,9 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
+export PATH="./bin:$HOME/bin:$HOME/.zsh/bin:$PATH"
+chmod +x $HOME/.zsh/bin/*
+
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
@@ -54,4 +58,5 @@ _load_settings "$HOME/.zsh/configs"
 [[ -f ~/.aliases ]] && source ~/.aliases
 
 # reload the colors with wal
-wal -R -e -q -n
+wal -R -e -n -q
+wal --preview | tail -n2 | head -n1

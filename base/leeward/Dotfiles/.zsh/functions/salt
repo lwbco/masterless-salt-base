@@ -1,6 +1,0 @@
-salt_sync() {
-    pushd /srv/salt
-    sudo git pull
-    sudo cp -r /home/linked/salt/* /srv/salt/base
-    sudo salt-call state.highstate $*
-}
