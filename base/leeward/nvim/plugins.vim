@@ -12,7 +12,7 @@ command!  -nargs=1 UnPlug call s:UnPlug(<args>)
 
 let g:has_async = v:version >= 800 || has('nvim')
 
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.config/nvim/bundle')
 
 " Define bundles via Github repos
 Plug 'mbbill/undotree'
@@ -22,6 +22,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'spf13/vim-autoclose'
 Plug 'tpope/vim-fugitive'
 Plug 'saltstack/salt-vim'
+Plug 'airblade/vim-gitgutter'
 
 if g:has_async
   Plug 'w0rp/ale'
@@ -34,6 +35,7 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+
 let g:deoplete#enable_at_startup = 1
 
 call plug#end()

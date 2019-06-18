@@ -42,3 +42,21 @@ leeward_ssh_keys:
     - source: salt://leeward/Dotfiles/.zsh
     - user: 1133
     - group: 1133
+
+/home/linked/.config/nvim:
+  file.recurse:
+    - source: salt://leeward/nvim
+    - user: 1133
+    - group: 1133
+
+install_vim_plugins:
+  cmd.run:
+    - name: /usr/bin/nvim +PlugInstall +qall &>/dev/null
+    - runas: linked
+    - cwd: /home/linked
+    - onchanges:
+      - file: /home/linked/.config/nvim
+
+# Apps
+silversearcher-ag:
+  pkg.installed

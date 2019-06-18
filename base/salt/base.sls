@@ -10,3 +10,4 @@ base_states:
     - name: https://github.com/lwbco/masterless-salt-base.git
     - target: /srv/salt
     - force_reset: True
+    - force_checkout: True
