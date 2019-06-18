@@ -58,5 +58,17 @@ install_vim_plugins:
       - file: /home/linked/.config/nvim
 
 # Apps
-silversearcher-ag:
-  pkg.installed
+direnv: pkg.installed
+autojump: pkg.installed
+
+silversearcher-ag: pkg.installed
+
+python3-venv: pkg.installed
+python3-pylint-common: pkg.installed
+
+black:
+  pip.installed:
+    - name: black
+    - bin_env: /usr/bin/pip3
+    - require:
+      - pkg: python3-pip

@@ -28,6 +28,13 @@ if g:has_async
   Plug 'w0rp/ale'
 endif
 
+" Python plugins
+Plug 'neomake/neomake'
+Plug 'mitsuhiko/vim-python-combined'
+Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'python-mode/python-mode'
+Plug 'ambv/black'
+
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -36,6 +43,9 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+
 let g:deoplete#enable_at_startup = 1
 
 call plug#end()
+
+call neomake#configure#automake('nrwi', 500)

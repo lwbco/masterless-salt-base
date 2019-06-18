@@ -46,17 +46,10 @@ _load_settings() {
     fi
   fi
 }
-_load_settings "$HOME/.zsh/configs"
-
-export PATH="./bin:$HOME/bin:$HOME/.zsh/bin:$PATH"
-chmod +x $HOME/.zsh/bin/*
+_load_settings "$HOME/.zsh/config"
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
-
-# reload the colors with wal
-wal -R -e -n -q
-wal --preview | tail -n2 | head -n1
