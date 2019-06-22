@@ -71,6 +71,7 @@ silversearcher-ag: pkg.installed
 
 python3-venv: pkg.installed
 python3-pylint-common: pkg.installed
+resolvconf: pkg.installed
 
 black:
   pip.installed:
