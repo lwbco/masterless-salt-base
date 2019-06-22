@@ -24,6 +24,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'janko/vim-test'
 Plug 'saltstack/salt-vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 if g:has_async
   Plug 'w0rp/ale'

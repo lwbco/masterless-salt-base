@@ -5,6 +5,26 @@
     - user: 1133
     - group: 1133
 
+/home/linked/.Xresources:
+  file.managed:
+    - makedirs: true
+    - source: salt://leeward/.Xresources
+    - user: 1133
+    - group: 1133
+
+/home/linked/.Xdefaults:
+  file.managed:
+    - makedirs: true
+    - source: salt://leeward/.Xdefaults
+    - user: 1133
+    - group: 1133
+
+/home/linked/.urxvt-perls:
+  file.recurse:
+    - source: salt://leeward/.urxvt-perls
+    - user: 1133
+    - group: 1133
+
 /home/linked/.config/i3-regolith/config:
   file.managed:
     - makedirs: true
@@ -38,7 +58,16 @@
     - user: 1133
     - group: 1133
 
+reload_xrdb:
+  cmd.run:
+    - name: xrdb ~/.Xresources
+    - runas: linked
+    - cwd: /home/linked
+    - onchanges:
+      - file: /home/linked/.Xresources
+
 pywal:
   pip.installed:
     - name: pywal
 
+rxvt-unicode: pkg.installed

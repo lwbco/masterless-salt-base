@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+wal --preview | tail -n 3 | head -n 2

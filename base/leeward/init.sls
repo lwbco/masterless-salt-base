@@ -33,13 +33,19 @@ leeward_ssh_keys:
 /home/linked/.zshrc:
   file.managed:
     - makedirs: true
-    - source: salt://leeward/Dotfiles/.zshrc
+    - source: salt://leeward/.zshrc
+    - user: 1133
+    - group: 1133
+
+/home/linked/bin:
+  file.recurse:
+    - source: salt://leeward/bin
     - user: 1133
     - group: 1133
 
 /home/linked/.zsh:
   file.recurse:
-    - source: salt://leeward/Dotfiles/.zsh
+    - source: salt://leeward/.zsh
     - user: 1133
     - group: 1133
 

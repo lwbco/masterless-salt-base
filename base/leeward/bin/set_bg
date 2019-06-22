@@ -1,0 +1,6 @@
+#!/bin/bash
+[[ -z "$1" ]] && echo "You must specify a wallpaper" && exit
+
+cp $1 ~/.config/wallpaper.jpg
+feh --bg-scale $1
+wal -i $1
