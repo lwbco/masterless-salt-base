@@ -5,5 +5,5 @@ colors
 # enable colored output from ls, etc. on FreeBSD-based systems
 export CLICOLOR=1
 
-wal -R -e -q -n 
+wal -R -e -q -n
 /home/linked/bin/show_colors

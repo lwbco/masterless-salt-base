@@ -44,6 +44,11 @@
     - makedirs: true
     - source: salt://leeward/compton.conf
 
+/home/linked/.gitconfig:
+  file.managed:
+    - makedirs: true
+    - source: salt://leeward/.gitconfig
+
 
 /home/linked/.config/wallpaper.jpg:
   file.managed:
@@ -58,6 +63,14 @@
     - user: 1133
     - group: 1133
 
+/home/linked/.gnupg:
+  file.recurse:
+    - source: salt://leeward/.gnupg
+    - dir_mode: 700
+    - file_mode: 600
+    - user: 1133
+    - group: 1133
+
 reload_xrdb:
   cmd.run:
     - name: xrdb ~/.Xresources
@@ -66,8 +79,19 @@ reload_xrdb:
     - onchanges:
       - file: /home/linked/.Xresources
 
+load_gpg_keys:
+  cmd.run:
+    - name: gpg2 --import ~/.gnupg/public.asc
+    - runas: linked
+    - cwd: /home/linked
+    - onchanges:
+      - file: /home/linked/.gnupg
+
 pywal:
   pip.installed:
     - name: pywal
 
 rxvt-unicode: pkg.installed
+gnupg2: pkg.installed
+gnupg-agent: pkg.installed
+scdaemon: pkg.installed

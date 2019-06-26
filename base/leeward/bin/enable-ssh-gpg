@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+[[ -z "$1" ]] && echo "Usage: enable-ssh-gpg hostname [... ssh connection args]" &&
+exit
+
+echo "connecting to $1 to lookup socket..."
+REMOTE=$(ssh $* gpgconf --list-dir agent-socket)
+CACHE=$HOME/.cache/.gpg-remote-$1
+
+echo "saving remote socket: $REMOTE"
+echo "local cache file: $CACHE"
+mkdir -p $HOME/.cache/
+echo $REMOTE.$HOST > $CACHE
+

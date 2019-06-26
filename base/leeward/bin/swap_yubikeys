@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+echo "This clears cached yubikey data because I have multiple keys I use interchangably"
+gpg-connect-agent "scd serialno" "learn --force" /bye
+echo UPDATESTARTUPTTY | gpg-connect-agent
+
+
+# OLD WAY
+# keyid=8E6D1FDB25758D46EC6EA25CC0F88A909C9FAD91
+# gpgconf --kill gpg-agent
+# cd "$(gpgconf --list-dirs homedir)/private-keys-v1.d"
+# gpg -K --with-keygrip --with-colons "$keyid" | \
+# awk -F: '/^grp/ { print $10".key"; }' | \
+# xargs rm -vf

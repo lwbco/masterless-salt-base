@@ -1,0 +1,6 @@
+[user]
+	email = lbailey@shipchain.io
+	name = Lee Bailey
+	signingkey = 280EDB0289AE75E3
+[commit]
+	gpgsign = true

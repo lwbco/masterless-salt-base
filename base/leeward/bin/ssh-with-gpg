@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+[[ -z "$*" ]] && echo "Usage: ssh-with-gpg hostname [... ssh connection args]" && exit
+CACHE=$HOME/.cache/.gpg-remote-$1
+[[ ! -f "$CACHE" ]] && echo "You need to enable-ssh-gpg for '$1' first" && exit
+
+REMOTE=$(cat $CACHE)
+
+echo "remote socket: $REMOTE"
+
+LOCAL_EXTRA=$(gpgconf --list-dir agent-extra-socket)
+
+echo "local extra socket: $LOCAL_EXTRA"
+
+ssh -A -R $REMOTE:$LOCAL_EXTRA $*
