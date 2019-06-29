@@ -47,6 +47,9 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'python-mode/python-mode'
 Plug 'ambv/black'
 
+Plug 'hashivim/vim-terraform'
+
+
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
