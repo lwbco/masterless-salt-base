@@ -1,3 +1,0 @@
-#!/bin/bash
-
-~/bin/set_bg $(ls ~/Nextcloud/wallpapers/*.jpg | shuf -n 1)

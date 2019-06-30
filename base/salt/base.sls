@@ -15,6 +15,6 @@ base_states:
 /usr/local/bin/salt.lwbco:
   file.managed:
     - source: salt://salt/salt.lwbco
-    - mode: 700
+    - mode: 755
     - user: root
     - group: root

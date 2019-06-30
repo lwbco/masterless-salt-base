@@ -49,7 +49,7 @@ _load_settings() {
 _load_settings "$HOME/.zsh/config"
 
 # Local config
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+[[ -f ~/.zshrc.local ]] && echo $blue "Loading ~/.zshrc.local..." && source ~/.zshrc.local
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases

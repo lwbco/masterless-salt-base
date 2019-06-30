@@ -3,6 +3,10 @@
 BIN=${0:a:h}
 
 clear
-$BIN/show_colors
-echo $blue"Applying local highstate from $HOME/salt..."
-$BIN/local_salt state.highstate --state-output=mixed -l quiet $* | grep -v 'Result: Clean'
+if [ -z "$(which wal)" ]; then
+  echo $blue"Applying salt state...."
+else
+  $BIN/show_colors
+fi
+
+salt.lwbco state.highstate --state-output=mixed -l quiet $* | grep -v 'Result: Clean'

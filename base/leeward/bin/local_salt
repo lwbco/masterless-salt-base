@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-set -e
-sudo salt-call --local --file-root=/home/linked/salt/base $*

@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+[[ -z "$(which wal)" ]] && exit
 
 wal --preview | tail -n 3 | head -n 2
