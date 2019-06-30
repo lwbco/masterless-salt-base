@@ -8,6 +8,7 @@ echo "Installing wget and git..."
 apt-get install -y wget git
 DIR=/srv/masterless/lwbco-base
 echo "Cloning masterless-lwbco-base into $DIR..."
+[[-e $DIR/.git ]] && rm -rf $DIR
 git clone https://github.com/lwbco/masterless-salt-base.git $DIR
 
 echo "Installing Salt..."
