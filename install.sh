@@ -4,17 +4,17 @@ set -e
 echo "Setting up nodename: $1"
 echo "Updating apt..."
 apt-get update
-echo "Installing wget and git..."
-apt-get install -y wget git
-DIR=/srv/masterless/lwbco
-echo "Cloning masterless-lwbco-base into $DIR..."
-[[-e $DIR/.git ]] && rm -rf $DIR
-git clone https://github.com/lwbco/masterless-salt-base.git $DIR
+echo "Installing curl and git..."
+apt-get install -y wget git curl
 
 echo "Installing Salt..."
 curl -L https://bootstrap.saltstack.com -o install_salt.sh
 sudo sh install_salt.sh -P -M
 
+DIR=/srv/masterless/lwbco
+echo "Cloning masterless-lwbco-base into $DIR..."
+[[ -e $DIR/.git ]] && rm -rf $DIR
+git clone https://github.com/lwbco/masterless-salt-base.git $DIR
 echo "$1" > /etc/salt/minion_id
 
 cp $DIR/base/salt/config/etc/salt/minion.d/masterless.conf /etc/salt/minion.d/masterless.conf

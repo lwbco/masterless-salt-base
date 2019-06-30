@@ -14,6 +14,10 @@ python3.7: pkg.installed
   file.symlink:
     - target: /usr/bin/python3.7
 
+/usr/local/bin/pip:
+  file.symlink:
+    - target: /usr/local/bin/pip3
+
 pip-upgrade:
   pip.installed:
     - upgrade: True
