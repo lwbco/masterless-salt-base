@@ -90,6 +90,10 @@ load_gpg_keys:
 pywal:
   pip.installed:
     - name: pywal
+    - bin_env: /usr/bin/pip3
+    - require:
+      - pkg: python3-pip
+
 
 rxvt-unicode: pkg.installed
 gnupg2: pkg.installed
