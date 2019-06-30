@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+if [ -z "$LWBCO_SALT_BASE" ]; then 
+  BASE=/srv/masterless/lwbco/base
+else
+  BASE="$LWBCO_SALT_BASE"
+fi
+echo "Using masterless salt from $BASE"
+sudo salt-call --local --file-root=$BASE $*

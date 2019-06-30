@@ -6,7 +6,7 @@ echo "Updating apt..."
 apt-get update
 echo "Installing wget and git..."
 apt-get install -y wget git
-DIR=/srv/masterless/lwbco-base
+DIR=/srv/masterless/lwbco
 echo "Cloning masterless-lwbco-base into $DIR..."
 [[-e $DIR/.git ]] && rm -rf $DIR
 git clone https://github.com/lwbco/masterless-salt-base.git $DIR
