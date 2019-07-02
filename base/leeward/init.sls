@@ -45,7 +45,8 @@ leeward_ssh_keys:
 
 chmod +x /home/linked/.config/bin/*:
   cmd.run:
-    - watch: /home/linked/.config/bin
+    - watch:
+      - /home/linked/.config/bin
 
 /home/linked/.zsh:
   file.recurse:
