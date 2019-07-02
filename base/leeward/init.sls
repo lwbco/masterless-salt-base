@@ -37,11 +37,15 @@ leeward_ssh_keys:
     - user: 1133
     - group: 1133
 
-/home/linked/bin:
+/home/linked/.config/bin:
   file.recurse:
     - source: salt://leeward/bin
     - user: 1133
     - group: 1133
+
+chmod +x /home/linked/.config/bin/*:
+  cmd.run:
+    - watch: /home/linked/.config/bin
 
 /home/linked/.zsh:
   file.recurse:
@@ -67,6 +71,7 @@ install_vim_plugins:
 direnv: pkg.installed
 autojump: pkg.installed
 
+tmux: pkg.installed
 silversearcher-ag: pkg.installed
 
 python3-venv: pkg.installed

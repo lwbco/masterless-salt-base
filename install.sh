@@ -5,10 +5,7 @@ echo "Setting up nodename: $1"
 echo "Updating apt..."
 apt-get update
 echo "Installing curl and git..."
-apt-get install -y wget git curl
-
-echo "Removing python2..."
-apt-get remove -y python2
+apt-get install -y wget git curl zsh gpg2
 
 DIR=/srv/masterless/lwbco
 echo "Cloning masterless-lwbco-base into $DIR..."
@@ -16,11 +13,10 @@ echo "Cloning masterless-lwbco-base into $DIR..."
 git clone https://github.com/lwbco/masterless-salt-base.git $DIR
 
 echo "Installing Salt..."
-wget -O - https://repo.saltstack.com/py3/ubuntu/18.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
-echo "deb http://repo.saltstack.com/py3/ubuntu/18.04/amd64/latest bionic main" > /etc/apt/sources.list.d/saltstack.list
-chmod 0644 /etc/apt/sources.list.d/saltstack.list
+# wget -O - https://repo.saltstack.com/py3/ubuntu/18.04/amd64/latest/SALTSTACK-GPG-KEY.pub | sudo apt-key add -
+# echo "deb http://repo.saltstack.com/py3/ubuntu/18.04/amd64/latest bionic main" > /etc/apt/sources.list.d/saltstack.list
+# chmod 0644 /etc/apt/sources.list.d/saltstack.list
 
-apt-get update
 apt-get install -y salt-minion
 
 echo "$1" > /etc/salt/minion_id

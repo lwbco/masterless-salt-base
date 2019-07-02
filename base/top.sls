@@ -10,7 +10,6 @@ base:
     - python-pip
     - screen
     - ssh
-    - swap
     - sysstat
     - timezone
     - wget
