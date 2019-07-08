@@ -6,5 +6,5 @@ colors
 export CLICOLOR=1
 
 if [ ! -z "$(which wal)" ] ; then
-  wal -R -e -q -n && /home/linked/bin/show_colors
+  wal -R -e -q -n && /home/linked/.config/bin/show_colors
 fi

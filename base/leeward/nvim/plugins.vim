@@ -44,8 +44,6 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'neomake/neomake'
 Plug 'mitsuhiko/vim-python-combined'
 Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'python-mode/python-mode'
-Plug 'ambv/black'
 
 Plug 'hashivim/vim-terraform'
 

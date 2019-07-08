@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+[[ -z "$1" ]] && echo "Usage: dig.subspace [hostname]"
+
+ANSWER=$(dig $1 @10.20.1.1 | grep -a1 "ANSWER SECTION" | tail -n1)
+[[ -z "$ANSWER" ]] && echo "$1: NO RESULTS" || echo $ANSWER

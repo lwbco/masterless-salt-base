@@ -68,12 +68,28 @@ install_vim_plugins:
     - onchanges:
       - file: /home/linked/.config/nvim
 
+ssh_keys_exist:
+  cmd.run:
+    - name: ssh-keygen -t rsa -b 4096
+    - cwd: /home/linked
+    - runas: linked
+    - creates: /home/linked/.ssh/id_rsa
+
+
+root_ssh_keys_exist:
+  cmd.run:
+    - name: cp /home/linked/.ssh/id_rsa .ssh/ && chown -R root:root .ssh
+    - cwd: /root
+    - creates: /root/.ssh/id_rsa
+
 # Apps
 direnv: pkg.installed
 autojump: pkg.installed
 
 tmux: pkg.installed
 silversearcher-ag: pkg.installed
+net-tools: pkg.installed
+cowsay: pkg.installed
 
 python3-venv: pkg.installed
 python3-pylint-common: pkg.installed

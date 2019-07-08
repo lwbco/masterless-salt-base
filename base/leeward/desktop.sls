@@ -48,6 +48,8 @@
   file.managed:
     - makedirs: true
     - source: salt://leeward/.gitconfig
+    - user: 1133
+    - group: 1133
 
 
 /home/linked/.config/wallpaper.jpg:
@@ -86,6 +88,8 @@ load_gpg_keys:
     - cwd: /home/linked
     - onchanges:
       - file: /home/linked/.gnupg
+    - require:
+      - pkg: gnupg2
 
 pywal:
   pip.installed:
@@ -99,3 +103,5 @@ rxvt-unicode: pkg.installed
 gnupg2: pkg.installed
 gnupg-agent: pkg.installed
 scdaemon: pkg.installed
+pass: pkg.installed
+qtpass: pkg.installed
