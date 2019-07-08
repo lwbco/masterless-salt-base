@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+sudo pip install -e git+git@code.lwb.co:netprophet/salt-packets.git@master\#egg=spack
