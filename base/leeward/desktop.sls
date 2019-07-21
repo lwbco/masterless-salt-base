@@ -105,3 +105,5 @@ gnupg-agent: pkg.installed
 scdaemon: pkg.installed
 pass: pkg.installed
 qtpass: pkg.installed
+caffeine: pkg.installed
+xdotool: pkg.installed

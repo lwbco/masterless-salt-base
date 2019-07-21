@@ -87,6 +87,7 @@ direnv: pkg.installed
 autojump: pkg.installed
 
 tmux: pkg.installed
+jq: pkg.installed
 silversearcher-ag: pkg.installed
 net-tools: pkg.installed
 cowsay: pkg.installed

@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+killall flameshot
+sleep 0.2
+/usr/bin/flameshot $*
