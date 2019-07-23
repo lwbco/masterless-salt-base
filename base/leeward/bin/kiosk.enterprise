@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+ssh enterprise.lwb.co .config/bin/kiosk "$*"
