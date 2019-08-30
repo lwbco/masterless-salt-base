@@ -107,3 +107,5 @@ pass: pkg.installed
 qtpass: pkg.installed
 caffeine: pkg.installed
 xdotool: pkg.installed
+telegram-desktop: pkg.installed
+slack: pkg.installed
