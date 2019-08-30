@@ -101,7 +101,7 @@ pywal:
 
 rxvt-unicode: pkg.installed
 gnupg2: pkg.installed
-gnupg-agent: pkg.installed
+gpg-agent: pkg.installed
 scdaemon: pkg.installed
 pass: pkg.installed
 qtpass: pkg.installed
