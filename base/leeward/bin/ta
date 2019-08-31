@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+if [[ "$1" == "" ]]; then
+  tmux a -d || tmux
+else
+  tmux a -d -t "$1" || tmux new -s "$1"
+fi

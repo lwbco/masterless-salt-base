@@ -86,6 +86,8 @@ root_ssh_keys_exist:
 direnv: pkg.installed
 autojump: pkg.installed
 
+neofetch: pkg.installed
+htop: pkg.installed
 tmux: pkg.installed
 jq: pkg.installed
 silversearcher-ag: pkg.installed
