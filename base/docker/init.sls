@@ -12,7 +12,7 @@ software-properties-common:
 
 docker-repo:
   pkgrepo.managed:
-    - name: deb [arch=amd64] https://download.docker.com/linux/{{ grains["os"]|lower }} {{ grains["oscodename"] }} stable edge test
+    - name: deb [arch=amd64] https://download.docker.com/linux/{{ grains["os"]|lower }} {{ grains["oscodename"].replace('eoan', 'disco') }} stable edge test
     - humanname: Docker Package Repository
     - key_url: https://download.docker.com/linux/{{grains["os"]|lower}}/gpg
     - file: /etc/apt/sources.list.d/docker.list
