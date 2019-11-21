@@ -46,6 +46,8 @@ Plug 'mitsuhiko/vim-python-combined'
 Plug 'Vimjas/vim-python-pep8-indent'
 
 Plug 'hashivim/vim-terraform'
+Plug 'jacqueswww/vim-vyper'
+Plug 'tomlion/vim-solidity'
 
 
 if has('nvim')

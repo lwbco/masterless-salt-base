@@ -1,0 +1,7 @@
+#!/bin/bash
+
+DISPLAY=:0 notify-send "closing curtains"
+
+export SSH_AUTH_SOCK=/run/user/1133/gnupg/S.gpg-agent.ssh
+
+ssh enterprise.lwb.co python curtains/curtains.py close 2

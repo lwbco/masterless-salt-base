@@ -1,2 +1,5 @@
 #!/bin/bash
+tmux send-keys -t test.0 C-c
+tmux send-keys -t test.0 C-c
+tmux send-keys -t test.0 C-c
 tmux send-keys -t test.0 "$*" ENTER

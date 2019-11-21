@@ -5,7 +5,7 @@ echo "Setting up nodename: $1"
 echo "Updating apt..."
 apt-get update
 echo "Installing curl and git..."
-apt-get install -y wget git curl zsh gpg2
+apt-get install -y wget git curl zsh gpg
 
 DIR=/srv/masterless/lwbco
 echo "Cloning masterless-lwbco-base into $DIR..."

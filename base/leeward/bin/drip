@@ -1,0 +1,5 @@
+#!/bin/bash
+
+[[ -z "$1" ]] && echo "Usage: drip [address:0xDEADBEEF]" && exit
+
+curl https://faucet.ropsten.be/donate/$1
