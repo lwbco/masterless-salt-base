@@ -24,4 +24,4 @@ echo "$1" > /etc/salt/minion_id
 cp $DIR/base/salt/config/etc/salt/minion.d/masterless.conf /etc/salt/minion.d/masterless.conf
 chmod 0644 /etc/salt/minion.d/masterless.conf
 
-/usr/bin/salt-call --local --file-root=$DIR/base state.highstate
+timeout 900 /usr/bin/salt-call --local --file-root=$DIR/base state.highstate

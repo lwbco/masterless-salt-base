@@ -1,6 +1,7 @@
 base:
   '*.lwb.co':
     - docker
+    - k8s
     - fail2ban
     - git
     - groups
