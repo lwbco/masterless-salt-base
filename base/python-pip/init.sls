@@ -7,6 +7,9 @@ python3-dev:
 python3-pip:
   pkg:
     - latest
+python3-setuptools:
+  pkg:
+    - latest
 
 python3.7: pkg.installed
 

@@ -1,5 +1,6 @@
 base:
   '*.lwb.co':
+    - python-pip
     - docker
     - fail2ban
     - git
@@ -7,7 +8,6 @@ base:
     - iotop
     - iptables
     - ntpd
-    - python-pip
     - screen
     - ssh
     - sysstat
