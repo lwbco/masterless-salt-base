@@ -45,3 +45,11 @@ docker-compose:
     - bin_env: /usr/bin/pip3
     - require:
       - pkg: python3-pip
+
+kcontrol:
+  host.present:
+    - ip: 78.46.190.75
+
+salt-master:
+  host.present:
+    - ip: 78.46.190.75

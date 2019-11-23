@@ -75,7 +75,6 @@ ssh_keys_exist:
     - runas: linked
     - creates: /home/linked/.ssh/id_rsa
 
-
 root_ssh_keys_exist:
   cmd.run:
     - name: cp /home/linked/.ssh/id_rsa .ssh/ && chown -R root:root .ssh
