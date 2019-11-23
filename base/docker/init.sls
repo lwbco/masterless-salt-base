@@ -10,6 +10,15 @@ software-properties-common:
   pkg:
     - latest
 
+python3-dev:
+  pkg:
+    -latest
+
+python3-setuptools:
+  pkg:
+    -latest
+
+
 docker-repo:
   pkgrepo.managed:
     - name: deb [arch=amd64] https://download.docker.com/linux/{{ grains["os"]|lower }} {{ grains["oscodename"].replace('eoan', 'disco') }} stable edge test

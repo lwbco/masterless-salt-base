@@ -1,7 +1,6 @@
 base:
   '*.lwb.co':
     - docker
-    - k8s
     - fail2ban
     - git
     - groups
@@ -21,6 +20,7 @@ base:
 
   '*.servers.lwb.co':
     - salt.cronjob
+    - k8s
 
   '*.workstations.lwb.co':
     - force_yubikey
