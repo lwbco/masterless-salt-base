@@ -62,7 +62,8 @@ chmod +x /home/linked/.config/bin/*:
 
 install_vim_plugins:
   cmd.run:
-    - name: /usr/bin/nvim +PlugInstall +qall &>/dev/null
+    - name: nohup /usr/bin/nvim +PlugInstall +qall &>/dev/null &
+    - ignore_timeout: true
     - runas: linked
     - cwd: /home/linked
     - onchanges:
