@@ -71,7 +71,7 @@ install_vim_plugins:
 
 ssh_keys_exist:
   cmd.run:
-    - name: ssh-keygen -t rsa -b 4096
+    - name: ssh-keygen -t rsa -b 4096 -N '' -f /home/linked/.ssh/id_rsa
     - cwd: /home/linked
     - runas: linked
     - creates: /home/linked/.ssh/id_rsa
