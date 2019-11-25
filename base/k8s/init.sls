@@ -17,5 +17,3 @@ kubeadm:
 kubectl:
   pkg:
     - latest
-
-apt-mark hold kubelet kubeadm kubectl: cmd.run
