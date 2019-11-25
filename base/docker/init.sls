@@ -20,8 +20,8 @@ docker-repo:
 
 {% if grains['os'] == 'Ubuntu' %}
 docker-ce:
-  pkg:
-    - latest
+  pkg.installed:
+    - version: 18.06.2~ce~3-0~ubuntu
     - require:
       - pkg: git
       - pkg: ca-certificates

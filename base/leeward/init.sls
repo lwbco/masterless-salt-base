@@ -95,12 +95,14 @@ net-tools: pkg.installed
 cowsay: pkg.installed
 
 python3-venv: pkg.installed
-python3-pylint-common: pkg.installed
+# Causing Problems on ubuntu 18.04
+#python3-pylint-common: pkg.installed
 resolvconf: pkg.installed
 
-black:
-  pip.installed:
-    - name: black
-    - bin_env: /usr/bin/pip3
-    - require:
-      - pkg: python3-pip
+# Causing Problems on ubuntu 18.04
+#black:
+  #pip.installed:
+    #- name: black
+    #- bin_env: /usr/bin/pip3
+    #- require:
+      #- pkg: python3-pip
