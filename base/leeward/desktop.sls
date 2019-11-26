@@ -116,3 +116,4 @@ caffeine: pkg.installed
 xdotool: pkg.installed
 telegram-desktop: pkg.installed
 slack: pkg.installed
+gnome-shell-extension-dashtodock: pkg.installed
