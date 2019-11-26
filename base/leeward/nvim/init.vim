@@ -189,6 +189,9 @@ nmap <silent> ,y "xy<CR>:wviminfo! ~/.viminfo<CR>
 nmap <silent> ,d "xd<CR>:wviminfo! ~/.viminfo<CR>
 nmap <silent> ,p :rviminfo! ~/.viminfo<CR>"xp
 
+" w!! to sudo save
+cmap w!! w !sudo tee > /dev/null %
+
 " Move between linting errors
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>

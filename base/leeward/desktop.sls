@@ -1,3 +1,9 @@
+/home/linked/.config/Nextcloud/sync-exclude.lst:
+  file.managed:
+    - makedirs: true
+    - source: salt://leeward/sync-exclude.lst
+    - user: 1133
+    - group: 1133
 /home/linked/.config/terminator/config:
   file.managed:
     - makedirs: true
